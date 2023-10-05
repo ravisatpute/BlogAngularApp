@@ -1,0 +1,13 @@
+<div #myModal class="container">
+    <div class="content">
+      <p> <textarea   [(ngModel)]="commentbox"  name="commentbox"   class="form-control form-control-sm"
+        id="commentbox"  placeholder="Add a comment.."
+        rows="2"
+      ></textarea></p>
+  
+      <button class="btn btn-primary " (click)="onSubmit()">Submit</button>
+      <!-- <button class="btn btn-primary " (click)="close()">Close</button> -->
+
+      <a (click)="close()" class="btn btn-link left-padding-5" >Cancel</a>
+    </div>
+    </div>

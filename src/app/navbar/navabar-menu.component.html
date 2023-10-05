@@ -1,0 +1,20 @@
+<nav *ngIf="isMenuVisible" class="navbar navbar-dark navbar-expand-md navbar-toggleable-md bg-dark">
+    <a routerLink="/home" class="navbar-brand" routerLink="/dashboard"  (click)="collapseNavMenu()">Angular Blog App</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" (click)="isCollapsed = !isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [(ngModel)]="isCollapsed">
+      <ul class="navbar-nav" >
+        <li class="nav-item">
+          <a routerLink="/dashboard" routerLinkActive="active" class="nav-link" (click)="collapseNavMenu()">Dashboard <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/angualar-blog" routerLinkActive="active" class="nav-link" (click)="collapseNavMenu()">Manage Blog</a>
+        </li>
+        <li class="nav-item navbar-toggler-right">
+          <a routerLink="/login" routerLinkActive="active" class="nav-link" (click)="collapseNavMenu()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

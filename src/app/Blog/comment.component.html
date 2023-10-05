@@ -1,0 +1,26 @@
+<div class="t-comments-box">
+    <div class="comment-title">
+      Comments
+    </div>
+    <div class=" row add-comment" >
+      <div class="col-1">
+        <img  src="../../assets/user-png-icon-512.png"  alt="user" class="user-comment-image">
+      </div>
+    
+      <div class="comment-input col-6"  >
+          <textarea [(ngModel)]="commentData.description"          class="form-control form-control-sm"
+          id=""  placeholder="Add a comment.."
+          rows=""
+        ></textarea>
+
+
+
+       </div>
+        <div class="comment-input col-5" >
+          <!-- <span class="comment-send"><i class="fab fa-telegram-plane"></i></span> -->
+          <button (click)="addComment()" class="btn btn-primary">Post</button>
+        </div>
+      
+      </div>
+    </div>
+ 
