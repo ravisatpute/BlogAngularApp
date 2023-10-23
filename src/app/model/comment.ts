@@ -1,6 +1,5 @@
 
-
-  export interface comment {
+ export interface comment {
     blogId: number;
     CommentId:number;
     userId:number;

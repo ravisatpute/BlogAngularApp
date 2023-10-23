@@ -6,9 +6,7 @@ import { Observable } from 'rxjs';
 export class AuthInterceptor implements HttpInterceptor {
   constructor() {}
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const token = sessionStorage["token"]; // you probably want to store it in localStorage or something
-
-
+    const token = sessionStorage["token"];
     req = req.clone({
       setHeaders: {
         Authorization: `Bearer ${token}`
@@ -17,10 +15,6 @@ export class AuthInterceptor implements HttpInterceptor {
     if (!token) {
       return next.handle(req);
     }
-
- 
-
     return next.handle(req);
   }
-
 }

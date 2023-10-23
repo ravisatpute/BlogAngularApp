@@ -21,9 +21,7 @@ export class AuthService {
     
     this.requestOptions = { headers: this.headers};
   }
-  //apiurl='https://localhost:7267/api/User/UserLogin1?Email=ravi%40test.com&Password=test%401234';
-  apiurl='https://localhost:7267/api/';///UserLogin1?Email=ravi%40test.com&Password=test%401234';
-
+  apiurl='https://localhost:7267/api/';
   LogUser(inputdata:any){
     return this.http.post(this.apiurl+'User/UserLogin',inputdata)
   }
@@ -76,10 +74,4 @@ export class AuthService {
   getrole(){
     return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():'';
   }
-  // GetAllCustomer(){
-  //   return this.http.get('http://localhost:3000/customer');
-  // }
-  // Getaccessbyrole(role:any,menu:any){
-  //   return this.http.get('http://localhost:3000/roleaccess?role='+role+'&menu='+menu)
-  // }
 }

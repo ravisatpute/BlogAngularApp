@@ -21,8 +21,6 @@ export class ModalComponent {
     console.log("data  ...",data);
    this. commentData=data;
     this.commentbox=data.comment;
-    console.log("data coometn ...", this.commentbox);
-
     this.modal.nativeElement.style.display = 'block';
   }
 

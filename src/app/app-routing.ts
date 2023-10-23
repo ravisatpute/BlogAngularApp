@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component'
 import { SignUpComponent } from './login/sign-up.component';
-import { AppComponent } from './app.component';
 import { AuthGuard } from './guard/auth.guard';
 import { BlogListComponent } from './Blog/blog-list.component';
 import { ContentComponent } from './Blog/content-details.component';
@@ -17,8 +16,6 @@ const routes: Routes = [
 
    { component: BlogListComponent,path: '' ,canActivate: [AuthGuard] }
 ];
-
-  
 @NgModule({
   imports: [
     RouterModule.forRoot(routes)

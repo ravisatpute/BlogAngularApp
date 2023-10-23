@@ -18,7 +18,6 @@ export class AuthGuard implements CanActivate {
         if (menu == 'user') {
           if (this.service.getrole() == 'user') {
             return true;
-            console.log("admin You dont have access");
           } else {
             this.router.navigate(['']);
              // this.tostr.warning('You dont have access.')
@@ -38,5 +37,4 @@ export class AuthGuard implements CanActivate {
       return false;
     }
   }
-
 }

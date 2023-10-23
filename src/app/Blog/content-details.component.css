@@ -1,7 +1,6 @@
 .area-comentarios ul{
     list-style: none;
   }
-  
   .area-comentarios ul{
     display: block;
     overflow: hidden;
@@ -219,19 +218,6 @@
  color:  #007bff !important;
  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
  .t-comments-box {
   padding: 0.5rem;
   .comment-title {
@@ -312,6 +298,9 @@
         margin-right: 1rem;
       }
     }
+  }
+  .padding-2px{
+    padding:2px;
   }
   .comment-level-2 {
     margin-left: calc(50px + 1rem);

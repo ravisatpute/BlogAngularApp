@@ -9,17 +9,11 @@ import { AuthService } from '../Services/auth.service';
 })
 export class BlogListComponent {
   blogs :any;
-  //this.proceedlogin();
   constructor(private router: Router,private service: AuthService) {
-   // sessionStorage.clear();
-
   }
   ngOnInit() {
     this.service.GetBloglist().subscribe(item => {
       this.blogs = item;});
       console.log("blog Details",this.blogs);
     };   
-  
-  
-    
   }

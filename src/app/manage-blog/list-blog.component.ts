@@ -2,14 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { filter, first } from 'rxjs/operators';
 import { AuthService } from '../Services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { blog } from '../model/blog';
 import {ToastrService} from 'ngx-toastr'
 @Component(
   {
     templateUrl: "./list-blog.component.html"
-  }
-    
-    )
+  })
 export class ListComponent implements OnInit {
     users :any;
 

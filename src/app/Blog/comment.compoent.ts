@@ -1,8 +1,6 @@
 import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
 import { AuthService } from '../Services/auth.service';
 import { ActivatedRoute, Router} from '@angular/router';
-//import { comment } from '../model/comment';
-import {comment} from  '../model/comment';
 import { ToasterService } from '../services/toaster.service';
 
 @Component({
@@ -13,7 +11,6 @@ import { ToasterService } from '../services/toaster.service';
 export class CommentComponent implements OnInit {
   constructor(private service:AuthService, private toaster:ToasterService ,  private route: ActivatedRoute,private router:Router ) {}
   @Input() pblogId: any;
-  //commentData:comment;
   description:any;
   @Output("parentFun") parentFun: EventEmitter<any> = new EventEmitter();
   commentData: any = {
@@ -46,7 +43,5 @@ export class CommentComponent implements OnInit {
           });
         });
    }
-
   }
-  
 }

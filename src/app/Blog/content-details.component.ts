@@ -5,7 +5,6 @@ import { ModalComponent } from '../modal/modal.component';
 import { AuthService } from '../Services/auth.service';
 import { ToasterService } from '../services/toaster.service';
 
-
 @Component({
   selector: 'app-content',
   templateUrl: './content-details.component.html',
@@ -50,10 +49,7 @@ getBlogData()
          this.commentlst = commentList;
          console.log(commentList)
        });
-
-
      });
- 
    });
 }
 deleteComment(commentId:any){
@@ -66,12 +62,10 @@ deleteComment(commentId:any){
   });
 
 }
-
 openModal(comment:any) {
   this.modal.open(comment);
 }
 parentFun(){
   this.getBlogData();
 }
-
-  };
+};

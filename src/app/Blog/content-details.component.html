@@ -1,35 +1,26 @@
     <div class="container">
       <app-modal  (parentFun)="parentFun()"  #modal></app-modal>
       <div *ngIf="blog">
-
-
       <h2>
         <strong
           ><a href="/"> {{ blog.title }}</a></strong>
       </h2>
     <h3>{{ blog.description }}</h3>
-      <!-- <img class="img-fluid rounded shadow" width="100%" src="{{ blog.image }}" /> -->
        <p class="lead">{{ blog.content }}</p> 
     </div>
     <app-comment  pblogId="blog.blogId"  (parentFun)="parentFun()"   #child></app-comment>
-
-    <div    class="area-comentarios">
-        <ul>
+    <!-- <div    class="area-comentarios">
   
-        </ul>
-      </div>
+      </div> -->
       
       <div *ngFor="let comment of commentlst;" style="padding-bottom: 2%;">
-
- 
       <div  class="comment comment-level-1" style="padding: 5px; border:slategray">
-        <!-- <img [src]="url_2" alt="" /> -->
         <div>
-          <div class="comment-label"  style="padding:2px;">
+          <div class="comment-label padding-2px">
             <span class="comment-name"><b>{{comment.userName}}</b> </span>
             <span class="comment-time"> - {{comment.commentTime| date: 'dd/MM/yyyy hh:mm a'}}</span>
           </div>
-          <div class="comment-content " style="padding:2px; padding-left: 5px;">
+          <div class="comment-content ">
           {{comment.comment}}
           </div>
           <div class="comment-action padding-left: 5px;">
@@ -47,11 +38,3 @@
       </div>
 
     </div>
-
-    
-   
-
- 
-
-  
-  
